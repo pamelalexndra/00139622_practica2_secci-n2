@@ -1,0 +1,65 @@
+/* Universal */
+* {
+  box-sizing: border-box;
+}
+
+/* Type or Tag */
+p {
+  margin-block: 1.5rem;
+}
+
+/* Classname */
+.class {
+  text-decoration: underline;
+}
+
+/* ID */
+#id {
+  font-family: monospace;
+}
+
+/* Relational */
+li:has(a) {
+  display: flex;
+}
+
+/* Descendant */
+header h1 {
+  /* Selects all Heading 1*/
+}
+
+/* Child */
+header>h1 {
+  /* Selects all Heading 1*/
+}
+
+/* General sibling */
+h1~p {
+  /* Selects all Heading 1*/
+}
+
+h1+p {}
+
+h1,
+p {}
+
+.container {
+  display: grid;
+  /* or inline-grid */
+  grid-template-columns:
+    1fr 1fr minmax(10px, 1fr) 3fr repeat(5, 1fr) 50px auto 100px 1fr;
+
+  /* e.g. */
+  grid-template-rows:
+    min-content 1fr min-content 100px 1fr max-content
+}
+
+.item {
+  flex-grow: 1;
+  /* espacio de los elementos internos */
+}
+
+.item-2 {
+  flex-grow: 2;
+  /* espacio especial de elemento item-2 */
+}
